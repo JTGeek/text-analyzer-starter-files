@@ -12,8 +12,8 @@ function removeReturns(text) {
 
 
 function reportOnText(text) {
-
-    var formatedText = uniqueWordCount(formatText(text));
+    // assign our results to var
+    var formatedText = getWordReport(formatText(text));
     var numDistinctWords = uniqueWordCount;
     var numTotalWords = wordCount;
     var averageWordLength = avgWordCount;
@@ -21,7 +21,7 @@ function reportOnText(text) {
 
 
 
-    // take our data and display it in the dom
+    // take data and display it in the dom
     var textReport = $('.js-text-report');
     textReport.find('.js-word-count').text(numTotalWords);
     textReport.find('.js-unique-word-count').text(numDistinctWords);
@@ -31,7 +31,7 @@ function reportOnText(text) {
 }
 
 
-function uniqueWordCount(words) {
+function getWordReport(words) {
     var unique = {};
     var total = 0;
 
