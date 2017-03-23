@@ -15,7 +15,7 @@ function reportOnText(text) {
 
     var formatedText = uniqueWordCount(formatText(text));
     var numDistinctWords = uniqueWordCount;
-    var numTotalWords = wordCount
+    var numTotalWords = wordCount;
     var averageWordLength = avgWordCount;
 
 
