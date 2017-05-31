@@ -45,7 +45,7 @@ function getWordReport(words) {
 
     return {
         wordCount: words.length,
-        unique: Object.keys(unique).length,
+        uniqueWordCount: Object.keys(unique).length,
         avgWordCount: total / words.length
     };
 }
