@@ -22,12 +22,14 @@ function reportOnText(text) {
 
 
     // take data and display it in the dom
+
     var textReport = $('.js-text-report');
+    textReport.removeClass('hidden');
     textReport.find('.js-word-count').text(numTotalWords);
     textReport.find('.js-unique-word-count').text(numDistinctWords);
     textReport.find('.js-average-word-length').text(
         averageWordLength + " characters");
-    textReport.removeClass('hidden');
+
 }
 
 
@@ -41,12 +43,13 @@ function getWordReport(words) {
         }
         total += word.length;
     }
-
-
+    wordCount = words.length,
+        uniqueWordCount = Object.keys(unique).length,
+        avgWordCount = total / words.length
     return {
-        wordCount: words.length,
-        uniqueWordCount: Object.keys(unique).length,
-        avgWordCount: total / words.length
+        wordCount,
+        uniqueWordCount,
+        avgWordCount
     };
 }
 
